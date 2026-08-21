@@ -1,0 +1,865 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NIJI_JOURNEY // 無名's プロフィール</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./images/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay">
+      <div class="extracted-style-001">
+        <div class="extracted-style-002">
+          <div class="extracted-style-003"></div>
+          <div class="extracted-style-004">
+            <svg class="svg-icon" viewBox="0 0 24 24">
+              <path
+                d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="extracted-style-005">
+            NIJI_JOURNEY // PASSPORT VERIFICATION
+          </h2>
+          <p class="extracted-style-006">LOADING FAN PROFILE & MERCH LOG...</p>
+        </div>
+
+        <div class="extracted-style-007">
+          <div class="extracted-style-008" id="loadingBar"></div>
+        </div>
+
+        <div class="extracted-style-009">
+          <span> NIJISANJI </span>
+          <span class="extracted-style-010" id="loadingPercent">0%</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ambient Glow Orbs -->
+    <div class="extracted-style-011">
+      <div id="orb1" class="ambient-orb"></div>
+      <div id="orb2" class="ambient-orb"></div>
+      <div id="orb3" class="ambient-orb"></div>
+      <div class="bg-grid"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header>
+      <nav class="glass-panel">
+        <a class="extracted-style-012" href="#">
+          <div class="extracted-style-013">
+            <svg class="svg-icon" viewBox="0 0 24 24">
+              <path
+                d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H6V4h12v16zM9 6h6v2H9V6zm0 4h6v2H9v-2zm0 4h4v2H9v-2z"
+              />
+            </svg>
+          </div>
+          <div class="extracted-style-014">
+            <span class="extracted-style-015"
+              >NIJI_JOURNEY<span class="extracted-style-016">.LOG</span></span
+            >
+            <span class="extracted-style-017">FAN PORTFOLIO // 2026</span>
+          </div>
+        </a>
+
+        <div class="nav-links">
+          <a href="#about"
+            ><svg class="svg-icon" viewBox="0 0 24 24">
+              <path
+                d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-7-2h2v-4h-2v4zm0-6h2V9h-2v2z"
+              />
+            </svg>
+            Profile</a
+          >
+          <a href="#oshis"
+            ><svg class="svg-icon" viewBox="0 0 24 24">
+              <path
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+              />
+            </svg>
+            Oshis</a
+          >
+          <a href="#charm"
+            ><svg class="svg-icon" viewBox="0 0 24 24">
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+              />
+            </svg>
+            Charm</a
+          >
+          <a href="#gallery"
+            ><svg class="svg-icon" viewBox="0 0 24 24">
+              <path
+                d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"
+              />
+            </svg>
+            Photo Log</a
+          >
+          <a href="#history"
+            ><svg class="svg-icon" viewBox="0 0 24 24">
+              <path
+                d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3c1.3 1.5 3.3 2.5 5.5 2.5v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L7 9.5V14h2V9.9l.8-1s0 0 0 0z"
+              />
+            </svg>
+            History</a
+          >
+        </div>
+
+        <div class="dropdown">
+          <button class="extracted-style-018">
+            <span class="extracted-style-019"></span>
+            <span>Color Palette</span>
+            <svg class="svg-icon" viewBox="0 0 24 24">
+              <path d="M7 10l5 5 5-5z" />
+            </svg>
+          </button>
+
+          <div class="dropdown-menu glass-panel">
+            <p class="extracted-style-020">Cold Gradient Palette</p>
+            <button
+              data-action="set-theme"
+              data-theme="default"
+              class="theme-btn"
+            >
+              <span class="extracted-style-021"
+                ><span class="extracted-style-022"></span> Ice Cyan</span
+              >
+              <span class="extracted-style-023">Default</span>
+            </button>
+            <button
+              data-action="set-theme"
+              data-theme="theme-lavender"
+              class="theme-btn"
+            >
+              <span class="extracted-style-021"
+                ><span class="extracted-style-024"></span> Soft Lavender</span
+              >
+              <span class="extracted-style-025">剣持刀也</span>
+            </button>
+            <button
+              data-action="set-theme"
+              data-theme="theme-mint"
+              class="theme-btn"
+            >
+              <span class="extracted-style-021"
+                ><span class="extracted-style-026"></span> Pale Mint</span
+              >
+              <span class="extracted-style-027">黛灰</span>
+            </button>
+            <button
+              data-action="set-theme"
+              data-theme="theme-aurora"
+              class="theme-btn"
+            >
+              <span class="extracted-style-021"
+                ><span class="extracted-style-028"></span> Aurora Twilight</span
+              >
+              <span class="extracted-style-029">ルンルン</span>
+            </button>
+            <button
+              data-action="set-theme"
+              data-theme="theme-ocean"
+              class="theme-btn"
+            >
+              <span class="extracted-style-021"
+                ><span class="extracted-style-030"></span> Crystal Ocean</span
+              >
+              <span class="extracted-style-031">渚トラウト</span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="extracted-style-032">
+        <div class="extracted-style-033">
+          <span class="extracted-style-034"></span>
+          <span>NIJISANJI FAN PORTFOLIO & BOARDING PASS</span>
+        </div>
+
+        <div class="extracted-style-035">
+          <h1 class="hero-title">
+            推しと共に、旅する日常。<br />
+            <span class="text-hologram"> NIJISANJI OSHIKATSU PORTFOLIO. </span>
+          </h1>
+          <p class="extracted-style-036">
+            にじさんじに彩られる毎日。<br />
+            グッズ撮影や動画視聴を楽しむオタクのプロフィールです♪
+          </p>
+        </div>
+
+        <!-- Boarding Pass / Passport Graphic Card -->
+        <div class="glass-panel ticket-shape extracted-style-037">
+          <!-- Header -->
+          <div class="extracted-style-038">
+            <div class="extracted-style-039">
+              <div class="extracted-style-040">
+                <svg class="svg-icon" viewBox="0 0 24 24">
+                  <path
+                    d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H6V4h12v16zM9 6h6v2H9V6zm0 4h6v2H9v-2zm0 4h4v2H9v-2z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <p class="extracted-style-041">PASSPORT</p>
+                <p class="extracted-style-042">NJ-2026-0820-MUMEI.</p>
+              </div>
+            </div>
+            <span class="extracted-style-043"> ACTIVE PASSENGER </span>
+          </div>
+
+          <!-- Ticket Content -->
+          <div class="extracted-style-044">
+            <div class="extracted-style-045">
+              <img
+                class="extracted-style-046"
+                src="images/me.jpeg"
+                alt="Avatar"
+              />
+            </div>
+
+            <div class="extracted-style-047">
+              <div>
+                <p class="extracted-style-048">NAME / HANDLE</p>
+                <h3 class="extracted-style-049">
+                  無名。
+                  <span class="extracted-style-050">/ MUMEI。</span>
+                </h3>
+              </div>
+
+              <div class="extracted-style-051">
+                <div>
+                  <p class="extracted-style-052">FAN HISTORY</p>
+                  <p class="extracted-style-053">TOP SECRET</p>
+                </div>
+                <div>
+                  <p class="extracted-style-052">STANCE</p>
+                  <p class="extracted-style-053">にじパぺ旅</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Footer Info -->
+          <div class="extracted-style-054">
+            <div class="extracted-style-055">
+              <span class="extracted-style-056"
+                ><svg class="svg-icon" viewBox="0 0 24 24">
+                  <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                  /></svg
+              ></span>
+              <span>最推し: 生粋の箱推し</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="extracted-style-057">
+          <a href="#oshis" class="btn-primary">
+            <svg class="svg-icon" viewBox="0 0 24 24">
+              <path
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+              />
+            </svg>
+            <span>推しライバーを見る</span>
+          </a>
+          <a href="#gallery" class="btn-secondary glass-card">
+            <svg class="svg-icon" viewBox="0 0 24 24">
+              <path
+                d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"
+              />
+            </svg>
+            <span>グッズ＆聖地巡礼ログ</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Marquee Ticker -->
+    <div class="marquee-wrapper">
+      <div class="marquee-track marquee-track-left">
+        <div class="marquee-content">
+          <span>◆ KANAE</span>
+          <span>◆ KUZUHA</span>
+          <span>◆ CHRONOIR</span>
+          <span>◆ KAIDA HARU</span>
+          <span>◆ FUWA MINATO</span>
+          <span>◆ KAGAMI HAYATO</span>
+          <span>◆ KENMOCHI TOYA</span>
+          <span>◆ ROF-MAO</span>
+          <span>◆ SASAKI SAKU</span>
+          <span>◆ SIINA YUIKA</span>
+          <span>◆ SAKUYUI</span>
+          <span>◆ NANASE SUZUNA</span>
+          <span>◆ SAOTOME BERRY</span>
+          <span>◆ KIRARA TAMAKO</span>
+          <span>◆ SAKAYORI SOMA</span>
+          <span>◆ NAGISA TROUTO</span>
+          <span>◆ SPECIALE</span>
+          <span>◆ NAGAO KEI</span>
+          <span>◆ GENZUKI TOJIRO</span>
+          <span>◆ KAIDA HARU</span>
+          <span>◆ VΔLZ</span>
+          <span>◆ TATITUTE TOTO</span>
+          <span>◆ SHIORIHA RURI</span>
+          <span>◆ MILAN･KESTREL</span>
+          <span>◆ MITARASHIDAN</span>
+          <span>◆ KUZUHA ＠ Vampire</span>
+          <span>◆ KANAE ＠ Angel</span>
+          <span>◆ KAGAMI HAYATO ＠ CEO</span>
+          <span>◆ FUWA MINATO ＠ Host</span>
+          <span>◆ KENMOCHI TOYA ＠ Studento</span>
+          <span>◆ YUMEOI KAKERU ＠ Singer</span>
+          <span>◆ VACHSS</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 1: About Me -->
+    <section id="about">
+      <div class="section-header">
+        <span class="section-badge">01 // ABOUT ME</span>
+        <h2 class="section-title">オタクプロフィール & 観測スタイル</h2>
+      </div>
+
+      <div class="grid-12">
+        <div class="col-span-12 col-span-md-5 glass-panel extracted-style-058">
+          <div>
+            <div class="extracted-style-059">
+              <div class="extracted-style-060">
+                <svg class="svg-icon" viewBox="0 0 24 24">
+                  <path
+                    d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <h3 class="extracted-style-061">無名。 (MUMEI。)</h3>
+                <p class="extracted-style-062">箱推し / グッズ撮影</p>
+              </div>
+            </div>
+
+            <p class="extracted-style-063">
+              旅行も作業もにじさんじと一緒。オリジナル曲や歌ってみたを聴くのが好きでよく聴いています♪
+            </p>
+
+            <div class="extracted-style-064">
+              <div class="extracted-style-065">
+                <span class="extracted-style-066">ファン歴</span>
+                <span class="extracted-style-067">非公開</span>
+              </div>
+              <div class="extracted-style-065">
+                <span class="extracted-style-066">主な観測時間帯</span>
+                <span class="extracted-style-067">24:00 〜 26:00</span>
+              </div>
+              <div class="extracted-style-068">
+                <span class="extracted-style-066">グッズ</span>
+                <span class="extracted-style-067"
+                  >にじぱぺ中心に気に入ったものを収集中</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-span-12 col-span-md-7 extracted-style-035">
+          <div class="glass-panel extracted-style-069">
+            <h4 class="extracted-style-070">
+              OSHI-KATSU BALANCE // 推し活スタイル
+            </h4>
+
+            <div>
+              <div class="extracted-style-071">
+                <span class="extracted-style-072">配信リアルタイム視聴率</span>
+                <span class="extracted-style-073">68%</span>
+              </div>
+              <div class="extracted-style-074">
+                <div class="extracted-style-075"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="extracted-style-071">
+                <span class="extracted-style-072">現地・聖地巡礼度</span>
+                <span class="extracted-style-073">72%</span>
+              </div>
+              <div class="extracted-style-074">
+                <div class="extracted-style-076"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="extracted-style-071">
+                <span class="extracted-style-072">グッズ撮影度</span>
+                <span class="extracted-style-073">95%</span>
+              </div>
+              <div class="extracted-style-074">
+                <div class="extracted-style-077"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card extracted-style-078">
+            <span class="extracted-style-079">WATCH & SUPPORT STYLE</span>
+            <h4 class="extracted-style-080">
+              作業のお供に雑談・ゲーム配信をのんびり視聴中！
+            </h4>
+            <p class="extracted-style-081">
+              普段は仕事のお供に歌枠や雑談配信を常用。どこかへ旅に行くときはにじたうんかにじぱぺと共に行ってます…！
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Oshis -->
+    <section id="oshis">
+      <div class="section-header">
+        <span class="section-badge">02 // MY FAVORITE LIVERS</span>
+        <h2 class="section-title">推し & 魅力詳細</h2>
+        <p class="extracted-style-082">
+          カードをクリックすると、激推しポイントやおすすめアーカイブが見られます
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <!-- Liver Card 1 -->
+        <div
+          data-action="toggle-liver-modal"
+          data-key="kanae"
+          class="glass-card extracted-style-083"
+        >
+          <div class="extracted-style-084">
+            <img
+              class="extracted-style-085"
+              src="images/tgbt.jpeg"
+              alt="咎人"
+            />
+            <div class="extracted-style-086"></div>
+            <span class="extracted-style-087">MAIN OSHI</span>
+            <div class="extracted-style-088">
+              <h3 class="extracted-style-089">咎人</h3>
+              <p class="extracted-style-090">togabito</p>
+            </div>
+          </div>
+
+          <div class="extracted-style-091">
+            <p class="extracted-style-092">
+              にじさんじを古代から支えている元２期生の二人。コラボでは相性ばっちりの掛け合いが見れたり見れなかったり。
+              ２人の歌ってみたはまだですか？？
+            </p>
+          </div>
+        </div>
+
+        <!-- Liver Card 2 -->
+        <div
+          data-action="toggle-liver-modal"
+          data-key="fuwa"
+          class="glass-card extracted-style-083"
+        >
+          <div class="extracted-style-084">
+            <img
+              class="extracted-style-085"
+              src="images/rfmo.jpeg"
+              alt="不破湊"
+            />
+            <div class="extracted-style-086"></div>
+            <span class="extracted-style-093">MAIN OSHI</span>
+            <div class="extracted-style-088">
+              <h3 class="extracted-style-089">ROF-MAO</h3>
+              <p class="extracted-style-094">ろふまお</p>
+            </div>
+          </div>
+          
+          <div class="extracted-style-091">
+            <p class="extracted-style-092">
+              初動画は無人島！？和気あいあいとした雰囲気がずっと見ていられる！
+            </p>
+          </div>
+        </div>
+
+        <!-- Liver Card 3 -->
+        <div
+          data-action="toggle-liver-modal"
+          data-key="kaida"
+          class="glass-card extracted-style-083"
+        >
+          <div class="extracted-style-084">
+            <img
+              class="extracted-style-085"
+              src="images/ngo.JPG"
+              alt="甲斐田晴"
+            />
+            <div class="extracted-style-086"></div>
+            <span class="extracted-style-095">MAIN OSHI</span>
+            <div class="extracted-style-088">
+              <h3 class="extracted-style-089">VΔLZ</h3>
+              <p class="extracted-style-096">ゔぁるつ</p>
+            </div>
+          </div>
+
+          <div class="extracted-style-091">
+            <p class="extracted-style-092">
+              桜魔帝国から現れた三人。こちらの世界にいるときと桜魔帝国にいるときのギャップも見どころ！
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Charm -->
+    <section id="charm">
+      <div class="section-header">
+        <span class="section-badge">03 // WHY I LOVE NIJISANJI</span>
+        <h2 class="section-title">にじさんじに沼る4つの魅力ポイント</h2>
+        <p class="extracted-style-082">
+          なぜこんなにも惹かれるのか？にじさんじの至高の魅力をご紹介♪
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <div class="glass-panel extracted-style-097">
+          <div class="extracted-style-098">01</div>
+          <h3 class="extracted-style-099">圧倒的な「歌唱力」</h3>
+          <p class="extracted-style-100">
+            プロ顔負けの歌唱力や表現力、自己プロデュース力によって作り上げられる最高の歌ってみたやオリジナル曲が魅力です。
+          </p>
+        </div>
+
+        <div class="glass-panel extracted-style-097">
+          <div class="extracted-style-098">02</div>
+          <h3 class="extracted-style-099">一人一人のギャップと個性</h3>
+          <p class="extracted-style-100">
+            配信の親しみやすく楽しい雰囲気と魅せるパフォーマンスのギャップに心奪われます。
+          </p>
+        </div>
+
+        <div class="glass-panel extracted-style-097">
+          <div class="extracted-style-098">03</div>
+          <h3 class="extracted-style-099">豊富な企画やイベント</h3>
+          <p class="extracted-style-100">
+            にじさんじ甲子園などで魅せられるアツいドラマや全力の姿が最高に輝いてます！！
+          </p>
+        </div>
+
+        <div class="glass-panel extracted-style-097">
+          <div class="extracted-style-098">04</div>
+          <h3 class="extracted-style-099">
+            にじさんじの生み出す唯一無二のカラー
+          </h3>
+          <p class="extracted-style-100">
+            にじさんじライバーはそれぞれに数えられない魅力があり、数えられない色がある。それでこそにじさんじ！！！
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Merch & Pilgrimage Photo Gallery -->
+    <section id="gallery">
+      <div class="section-header">
+        <span class="section-badge">04 // MERCH & PILGRIMAGE PHOTO LOG</span>
+        <h2 class="section-title">ベストショットメモリー</h2>
+        <p class="extracted-style-082">
+          お気に入りのグッズ写真やイベント・聖地巡礼の記録です（クリックで拡大表示）
+        </p>
+      </div>
+
+      <div id="galleryGrid" class="grid-3">
+        <div
+          class="gallery-item glass-card extracted-style-101"
+          data-action="open-lightbox"
+          data-src="images/Xmas.jpeg"
+          data-title="クリスマス: 長尾景、四季凪アキラ"
+          data-description="百均のクリスマスツリーと共に撮りました♪"
+        >
+          <img
+            class="extracted-style-085"
+            src="images/Xmas.jpeg"
+            alt="聖地巡礼"
+          />
+          <div class="extracted-style-102">
+            <span class="extracted-style-103">MERCH // クリスマス</span>
+            <p class="extracted-style-104">メリークリスマス！</p>
+          </div>
+        </div>
+
+        <div
+          class="gallery-item glass-card extracted-style-101"
+          data-action="open-lightbox"
+          data-src="images/greenman.jpeg"
+          data-title="ディズニー: ROF-MAO四神"
+          data-description="片手で無理やりかわいく撮影しました♡"
+        >
+          <img
+            class="extracted-style-085"
+            src="images/greenman.jpeg"
+            alt="グッズ"
+          />
+          <div class="extracted-style-102">
+            <span class="extracted-style-103">MERCH // ディズニー</span>
+            <p class="extracted-style-104">ろふ四神とリトルグリーンマン</p>
+          </div>
+        </div>
+
+        <div
+          class="gallery-item glass-card extracted-style-101"
+          data-action="open-lightbox"
+          data-src="images/mcmc.jpeg"
+          data-title="アニメイト: 剣持刀也、剣持刀子"
+          data-description="現地参戦できるのでそわそわしてます…。"
+        >
+          <img
+            class="extracted-style-085"
+            src="images/mcmc.jpeg"
+            alt="フェス"
+          />
+          <div class="extracted-style-102">
+            <span class="extracted-style-103">MERCH // アニメイト</span>
+            <p class="extracted-style-104">ライブするらしいじゃん。</p>
+          </div>
+        </div>
+
+        <div
+          class="gallery-item glass-card extracted-style-101"
+          data-action="open-lightbox"
+          data-src="images/tgtown.jpeg"
+          data-title="にじたうんカフェ: 咎人"
+          data-description="咎人っていいですよね。"
+        >
+          <img
+            class="extracted-style-085"
+            src="images/tgtown.jpeg"
+            alt="グッズ"
+          />
+          <div class="extracted-style-102">
+            <span class="extracted-style-103">MERCH // にじたうんカフェ</span>
+            <p class="extracted-style-104">咎人とにじたうんかふぇに！！</p>
+          </div>
+        </div>
+
+        <div
+          class="gallery-item glass-card extracted-style-101"
+          data-action="open-lightbox"
+          data-src="images/kgmmc.jpeg"
+          data-title="聞香: 加賀美ハヤト、剣持刀也"
+          data-description="和の文化を共に嗜みました♪"
+        >
+          <img
+            class="extracted-style-085"
+            src="images/kgmmc.jpeg"
+            alt="グッズ"
+          />
+          <div class="extracted-style-102">
+            <span class="extracted-style-103">MERCH // 聞香</span>
+            <p class="extracted-style-104">かがみもち、聞香だよ。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Timeline -->
+    <section class="extracted-style-105" id="history">
+      <div class="section-header">
+        <span class="section-badge">05 // FAN HISTORY</span>
+        <h2 class="section-title">２０２６推し活タイムライン</h2>
+      </div>
+
+      <div class="glass-panel extracted-style-106">
+        <div class="extracted-style-107">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="extracted-style-108">2026.02</span>
+            <h4 class="extracted-style-109">
+              VΔLZのラウンドワンコラボ&せめよんすき屋コラボ
+            </h4>
+            <p class="extracted-style-110">
+              三人のめちゃくちゃビジュのいいパネル見れて大満足です！！/第一弾ではハブリヒムでした
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot extracted-style-111"></div>
+            <span class="extracted-style-108">2026.04</span>
+            <h4 class="extracted-style-109">SMCのラウンドワンコラボ</h4>
+            <p class="extracted-style-110">三人とも見た目がどかめろすぎて♡</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="extracted-style-108">2026.05</span>
+            <h4 class="extracted-style-109">3SKMのコスモワールドコラボ</h4>
+            <p class="extracted-style-110">
+              かわいいカチューシャとクッキー即買いしました✌
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot extracted-style-111"></div>
+            <span class="extracted-style-108">2026.07</span>
+            <h4 class="extracted-style-109">甲斐田、ローレン、叶の現地</h4>
+            <p class="extracted-style-110">
+              ライブには参戦しませんでしたが会場の雰囲気を味わえて大満足でした♪
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="extracted-style-108">PRESENT</span>
+            <h4 class="extracted-style-109">毎日楽しく推し活中！</h4>
+            <p class="extracted-style-110">
+              作業と共に配信をみたり歌を聴いたりと平和で幸せな日常を送っています。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Interactive Area -->
+    <section id="connect">
+      <div class="grid-2">
+        <!-- Mini Game Diagnostic -->
+        <div class="glass-panel extracted-style-112">
+          <div>
+            <span class="extracted-style-113">MINI GAME</span>
+            <h3 class="extracted-style-114">
+              ✨ あなたへのおすすめライバー診断
+            </h3>
+            <p class="extracted-style-115">
+              今のあなたの気分にピッタリな（？）おすすめのライバーをランダム診断！
+            </p>
+
+            <div class="extracted-style-116" id="diagnosticBox">
+              <svg class="svg-icon extracted-style-117" viewBox="0 0 24 24">
+                <path
+                  d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM7 7h2v2H7V7zm0 4h2v2H7v-2zm0 4h2v2H7v-2zm10 0h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V7h2v2z"
+                />
+              </svg>
+              <p class="extracted-style-082">ボタンを押して診断スタート！</p>
+            </div>
+          </div>
+
+          <button
+            data-action="run-diagnostic"
+            class="btn-primary extracted-style-118"
+          >
+            おすすめライバーを診断してみる
+          </button>
+        </div>
+
+        <!-- Message Board -->
+        <div class="glass-panel extracted-style-069">
+          <div class="extracted-style-119">
+            <h3 class="extracted-style-061">💌 メッセージボード</h3>
+            <span class="extracted-style-120" id="msgCount">2 MSGS</span>
+          </div>
+
+          <form class="extracted-style-121" data-action="message-submit">
+            <input
+              type="text"
+              id="senderName"
+              placeholder="お名前 / ニックネーム (任意)"
+            />
+            <textarea
+              class="extracted-style-122"
+              id="messageContent"
+              required
+              rows="3"
+              placeholder="好きな配信や歌ってみたを教えて下さい！このサイトの感想も良ければ..."
+            ></textarea>
+            <button
+              type="submit"
+              class="btn-secondary glass-card extracted-style-118"
+            >
+              メッセージを送信
+            </button>
+          </form>
+
+          <div class="extracted-style-123" id="messagesList">
+            <div class="extracted-style-124">
+              <div class="extracted-style-125">
+                <span class="extracted-style-126">@例</span>
+                <span>1 hour ago</span>
+              </div>
+              <p class="extracted-style-072">
+                ChroNoiRのブラッディ・グルービーおすすめです！サイトの淡いブルーのデザインが凄く綺麗です！などもお待ちしております！
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modals -->
+    <div id="liverModal" class="modal-overlay hidden">
+      <div class="glass-panel extracted-style-127">
+        <button class="extracted-style-128" data-action="close-liver-modal">
+          ✕
+        </button>
+        <div id="modalContent"></div>
+      </div>
+    </div>
+
+    <div
+      id="lightboxModal"
+      class="modal-overlay hidden"
+      data-action="close-lightbox"
+    >
+      <div
+        class="glass-panel extracted-style-129"
+        data-action="stop-propagation"
+      >
+        <div class="extracted-style-130">
+          <h3 class="extracted-style-099" id="lightboxTitle"></h3>
+          <button class="extracted-style-131" data-action="close-lightbox">
+            ✕
+          </button>
+        </div>
+        <div class="extracted-style-132">
+          <img
+            class="extracted-style-133"
+            id="lightboxImg"
+            src=""
+            alt="Lightbox"
+          />
+        </div>
+        <p class="extracted-style-081" id="lightboxDesc"></p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="extracted-style-134">
+      <div class="extracted-style-135">
+        <p class="extracted-style-082">
+          当Webサイトは個人による「にじさんじ（ANYCOLOR株式会社）」非公式のファン作製プロフィールサイトです。
+        </p>
+        <p class="extracted-style-136">
+          © 2026 NIJI_JOURNEY. LOGGED FOR VTUBER FANS.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="glass-panel extracted-style-137">
+      <span id="toastMsg">メッセージを送信しました！</span>
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
