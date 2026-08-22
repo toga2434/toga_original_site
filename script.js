@@ -609,3 +609,41 @@ document.addEventListener("submit", (event) => {
     handleMessageSubmit(event);
   }
 });
+
+const reportModal = document.getElementById("reportModal");
+const reportModalClose = document.getElementById("reportModalClose");
+const reportModalImage = document.getElementById("reportModalImage");
+const reportModalTitle = document.getElementById("reportModalTitle");
+const reportModalDate = document.getElementById("reportModalDate");
+const reportModalType = document.getElementById("reportModalType");
+const reportModalDescription = document.getElementById(
+  "reportModalDescription",
+);
+
+document.querySelectorAll('[data-action="open-report"]').forEach((card) => {
+  card.addEventListener("click", () => {
+    reportModalTitle.textContent = card.dataset.title;
+    reportModalDate.textContent = card.dataset.date;
+    reportModalType.textContent = card.dataset.type;
+    reportModalDescription.textContent = card.dataset.description;
+    reportModalImage.src = card.dataset.image;
+    reportModalImage.alt = card.dataset.title;
+    reportModal.classList.add("active");
+  });
+});
+
+reportModalClose.addEventListener("click", () => {
+  reportModal.classList.remove("active");
+});
+
+reportModal.addEventListener("click", (event) => {
+  if (event.target === reportModal) {
+    reportModal.classList.remove("active");
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    reportModal.classList.remove("active");
+  }
+});

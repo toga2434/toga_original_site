@@ -109,6 +109,14 @@
             </svg>
             Photo Log</a
           >
+          <a href="#reports"
+            ><svg class="svg-icon" viewBox="0 0 24 24">
+              <path
+                d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"
+              />
+            </svg>
+            Report</a
+          >
           <a href="#history"
             ><svg class="svg-icon" viewBox="0 0 24 24">
               <path
@@ -674,10 +682,97 @@
       </div>
     </section>
 
-    <!-- Section 5: Timeline -->
+    <!-- Section 5: Live & Event Reports -->
+    <section id="reports">
+      <div class="section-header">
+        <span class="section-badge">05 // LIVE & EVENT REPORT</span>
+        <h2 class="section-title">ライブ・イベントレポ</h2>
+        <p class="extracted-style-082">
+          実際に参加したライブやイベントの思い出を記録しています
+        </p>
+      </div>
+
+      <div class="report-grid">
+        <article
+          class="report-card glass-card"
+          data-action="open-report"
+          data-title="にじさんじライブ参戦レポ"
+          data-date="2026.xx.XX"
+          data-type="LIVE"
+          data-image="images/mcmc.jpeg"
+          data-description="ここにレポを書いてね"
+        >
+          <div class="report-image">
+            <img src="images/mcmc.jpeg" alt="にじさんじライブ参戦レポ" />
+            <span class="report-label">LIVE</span>
+          </div>
+          <div class="report-content">
+            <div class="report-meta">
+              <span>2026.xx.XX</span>
+              <span>LIVE</span>
+            </div>
+            <h3>タイトル</h3>
+            <p>ここにレポを書いてね</p>
+            <span class="report-more">続きを読む &rarr;</span>
+          </div>
+        </article>
+
+        <article
+          class="report-card glass-card"
+          data-action="open-report"
+          data-title="タイトル"
+          data-date="2026.xx.XX"
+          data-type="EVENT"
+          data-image="images/tgtown.jpeg"
+          data-description="ここにレポを書いてね"
+        >
+          <div class="report-image">
+            <img src="images/tgtown.jpeg" alt="タイトル" />
+            <span class="report-label">EVENT</span>
+          </div>
+          <div class="report-content">
+            <div class="report-meta">
+              <span>2026.xx.XX</span>
+              <span>EVENT</span>
+            </div>
+            <h3>タイトル</h3>
+            <p>ここにレポを書いてね</p>
+            <span class="report-more">続きを読む &rarr;</span>
+          </div>
+        </article>
+
+        <article
+          class="report-card glass-card"
+          data-action="open-report"
+          data-title="忘れられない一日"
+          data-date="2026.xx.XX"
+          data-type="LIVE"
+          data-image="images/kgmmc.jpeg"
+          data-description="現地で感じたことや印象に残った場面を自分用の記録として残しています。"
+        >
+          <div class="report-image">
+            <img src="images/kgmmc.jpeg" alt="忘れられない一日" />
+            <span class="report-label">LIVE</span>
+          </div>
+          <div class="report-content">
+            <div class="report-meta">
+              <span>2026.xx.XX</span>
+              <span>LIVE</span>
+            </div>
+            <h3>タイトル</h3>
+            <p>
+              現地で感じたことや印象に残った場面を自分用の記録として残しています。
+            </p>
+            <span class="report-more">続きを読む &rarr;</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Section 6: Timeline -->
     <section class="extracted-style-105" id="history">
       <div class="section-header">
-        <span class="section-badge">05 // FAN HISTORY</span>
+        <span class="section-badge">06 // FAN HISTORY</span>
         <h2 class="section-title">２０２６推し活タイムライン</h2>
       </div>
 
@@ -865,6 +960,28 @@
     <!-- Toast Notification -->
     <div id="toast" class="glass-panel extracted-style-137">
       <span id="toastMsg">メッセージを送信しました！</span>
+    </div>
+
+    <!-- Report Modal -->
+    <div id="reportModal" class="report-modal">
+      <div class="report-modal-content glass-panel">
+        <button
+          id="reportModalClose"
+          class="report-modal-close"
+          aria-label="閉じる"
+        >
+          ×
+        </button>
+        <img id="reportModalImage" class="report-modal-image" src="" alt="" />
+        <div class="report-modal-body">
+          <div class="report-modal-meta">
+            <span id="reportModalDate"></span>
+            <span id="reportModalType"></span>
+          </div>
+          <h2 id="reportModalTitle"></h2>
+          <p id="reportModalDescription"></p>
+        </div>
+      </div>
     </div>
 
     <script src="script.js" defer></script>
