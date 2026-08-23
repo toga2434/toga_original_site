@@ -486,7 +486,7 @@ const diagnosticList = [
   },
   {
     name: "先斗寧",
-    tag: "Ranunculus ❤️‍🔥",
+    tag: "Ranunculus 🫐",
     quote:
       "「このサーバーのお婆ちゃんキャラは私の物よ！みんなのこと孫って呼んでんだから！」",
     desc: "流行りにのったりのらなかったり、元気いっぱいビジュはなまる！テンションお高いよ。",
