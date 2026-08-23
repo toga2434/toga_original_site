@@ -201,7 +201,7 @@ const diagnosticList = [
     name: "剣持刀也",
     tag: "二期生 ⚔️",
     quote: "「まるでロリはロリじゃねぇーから」",
-    desc: "虚空って素晴らしいと思いませんか？あなたの入信を心待ちにしております。",
+    desc: "あなたも虚空って素晴らしいと思いませんか？Don't forget. We all came from there.あなたの入信を心待ちにしております。",
   },
   {
     name: "ギルザレンIII世",
