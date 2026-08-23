@@ -520,7 +520,7 @@ const diagnosticList = [
     name: "星導ショウ",
     tag: "Dytica(MECHATU-A) 🐙🌟",
     quote: "「I’m 無能, you know？」",
-    desc: "アレ、この見た目はたこ…？いいや、彼はヒーローです。宇宙の底まで引き込まれ",
+    desc: "アレ、この見た目はたこ…？いいや、彼はヒーローです。気づいたときには宇宙の底まで引き込まr…",
   },
   {
     name: "ミラン・ケストレル",
