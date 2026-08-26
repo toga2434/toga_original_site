@@ -728,3 +728,60 @@ document.addEventListener("keydown", (event) => {
     reportModal.classList.remove("active");
   }
 });
+
+// ページトップに戻るボタンの処理
+document.addEventListener('DOMContentLoaded', function () {
+  // 1. 用意した画像ファイルのパス（ご自身の画像パスに変更してください）
+  const topImages = [
+    './images/nj34top.png',
+    './images/toyatop.png',
+    './images/gakutop.png'
+  ];
+
+  const pageTopBtn = document.getElementById('pageTopBtn');
+  const pageTopImg = document.getElementById('pageTopImg');
+
+  if (!pageTopBtn || !pageTopImg) return;
+
+  // ランダムに画像を選択してセット
+  function setRandomImage() {
+    const randomIndex = Math.floor(Math.random() * topImages.length);
+    pageTopImg.src = topImages[randomIndex];
+  }
+
+  setRandomImage();
+
+  let isLoaded = false; // ローディング完了フラグ
+
+  // ボタンの表示/非表示のチェック関数
+  function checkScroll() {
+    // ページ読み込み完了前、またはスクロール量が200px未満の場合は表示しない
+    if (!isLoaded) return;
+
+    if (window.scrollY > 200) {
+      pageTopBtn.classList.add('is-visible');
+    } else {
+      pageTopBtn.classList.remove('is-visible');
+    }
+  }
+
+  // ページ内の画像やリソースがすべて読み込まれたらボタン有効化
+  window.addEventListener('load', function () {
+    // ローディングアニメーション終了までのミリ秒（例: 500ms後に有効化）
+    setTimeout(function () {
+      isLoaded = true;
+      checkScroll();
+    }, 500);
+  });
+
+  // スクロール時にチェック
+  window.addEventListener('scroll', checkScroll);
+
+  // クリック時にページ最上部へスムーズ移動
+  pageTopBtn.addEventListener('click', function () {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+});

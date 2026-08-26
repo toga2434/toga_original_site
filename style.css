@@ -1967,3 +1967,80 @@ textarea:focus {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* ==========================================
+   ページトップに戻るボタン
+   ========================================== */
+.page-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 64px;
+  height: 64px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  
+  /* ローディング画面（9999等）より下に配置 */
+  z-index: 45;
+
+  /* 初期状態は非表示（スクロールで上に戻った時に消える時のアニメーション） */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px) scale(0.9);
+  
+  /* ★消えるスピードの設定★ 
+     消える時はサッと速く（0.2s）切り替わるようにします */
+  transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease;
+}
+
+/* スクロール時に付与される表示用クラス */
+.page-top-btn.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+
+  /* ★現れる（表示される）スピードの設定★ 
+     現れる時はじわ〜っとゆっくり（0.8s）滑らかに登場させます */
+  transition: opacity 1.2s ease, visibility 1.2s ease, transform 1.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ボタン画像 */
+.page-top-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%; /* 丸型にする場合（不要なら削除） */
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.15));
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+/* ホバー・クリック時のアクション */
+.page-top-btn:hover img {
+  transform: translateY(-4px) scale(1.08);
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
+}
+
+.page-top-btn:active img {
+  transform: translateY(0) scale(0.95);
+}
+
+/* ★ ローディング表示中（bodyに .is-loading が付いている時等）は強制的に非表示にする指定 ★ */
+body.is-loading .page-top-btn,
+.loading-active .page-top-btn {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* スマホ表示用のサイズ調整 */
+@media (max-width: 640px) {
+  .page-top-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 52px;
+    height: 52px;
+  }
+}
