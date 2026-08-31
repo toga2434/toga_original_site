@@ -1982,7 +1982,7 @@ textarea:focus {
   cursor: pointer;
   outline: none;
   padding: 0;
-  
+
   /* ローディング画面（9999等）より下に配置 */
   z-index: 45;
 
@@ -1990,10 +1990,13 @@ textarea:focus {
   opacity: 0;
   visibility: hidden;
   transform: translateY(20px) scale(0.9);
-  
+
   /* ★消えるスピードの設定★ 
      消える時はサッと速く（0.2s）切り替わるようにします */
-  transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease;
+  transition:
+    opacity 0.5s ease,
+    visibility 0.5s ease,
+    transform 0.5s ease;
 }
 
 /* スクロール時に付与される表示用クラス */
@@ -2004,7 +2007,10 @@ textarea:focus {
 
   /* ★現れる（表示される）スピードの設定★ 
      現れる時はじわ〜っとゆっくり（0.8s）滑らかに登場させます */
-  transition: opacity 1.2s ease, visibility 1.2s ease, transform 1.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition:
+    opacity 1.2s ease,
+    visibility 1.2s ease,
+    transform 1.2s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 /* ボタン画像 */
@@ -2014,7 +2020,9 @@ textarea:focus {
   object-fit: contain;
   border-radius: 50%; /* 丸型にする場合（不要なら削除） */
   filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.15));
-  transition: transform 0.2s ease, filter 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease;
 }
 
 /* ホバー・クリック時のアクション */

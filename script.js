@@ -730,16 +730,16 @@ document.addEventListener("keydown", (event) => {
 });
 
 // ページトップに戻るボタンの処理
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
   // 1. 用意した画像ファイルのパス（ご自身の画像パスに変更してください）
   const topImages = [
-    './images/nj34top.png',
-    './images/toyatop.png',
-    './images/gakutop.png'
+    "./images/nj34top.png",
+    "./images/toyatop.png",
+    "./images/gakutop.png",
   ];
 
-  const pageTopBtn = document.getElementById('pageTopBtn');
-  const pageTopImg = document.getElementById('pageTopImg');
+  const pageTopBtn = document.getElementById("pageTopBtn");
+  const pageTopImg = document.getElementById("pageTopImg");
 
   if (!pageTopBtn || !pageTopImg) return;
 
@@ -759,14 +759,14 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!isLoaded) return;
 
     if (window.scrollY > 200) {
-      pageTopBtn.classList.add('is-visible');
+      pageTopBtn.classList.add("is-visible");
     } else {
-      pageTopBtn.classList.remove('is-visible');
+      pageTopBtn.classList.remove("is-visible");
     }
   }
 
   // ページ内の画像やリソースがすべて読み込まれたらボタン有効化
-  window.addEventListener('load', function () {
+  window.addEventListener("load", function () {
     // ローディングアニメーション終了までのミリ秒（例: 500ms後に有効化）
     setTimeout(function () {
       isLoaded = true;
@@ -775,13 +775,13 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // スクロール時にチェック
-  window.addEventListener('scroll', checkScroll);
+  window.addEventListener("scroll", checkScroll);
 
   // クリック時にページ最上部へスムーズ移動
-  pageTopBtn.addEventListener('click', function () {
+  pageTopBtn.addEventListener("click", function () {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   });
 });
